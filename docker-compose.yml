@@ -1,0 +1,14 @@
+version: '3'
+
+networks:
+  local-net:
+
+services:
+  cron-service:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: cron-service
+
+    networks:
+      - local-net
